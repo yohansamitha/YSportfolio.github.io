@@ -9,6 +9,11 @@
     background: #CAD3C8;
 }
 
+.sticky_color{
+    font-size: 50px;
+    color: black!important;
+}
+
 /*main section aligenment*/
 main {
     position: relative;
@@ -20,7 +25,7 @@ main {
 
 /*main section bottom border*/
 body > main > section {
-    border-bottom: 1px solid black;
+    /*border-bottom: 1px solid black;*/
 }
 
 
@@ -72,7 +77,7 @@ body > main > section {
     margin-right: 10px;
     font-weight: bold;
     text-decoration: none;
-    color: black;
+    color: white;
     font-size: 1em;
 }
 
@@ -556,6 +561,123 @@ body > main > section {
 
 /*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
+/*contactMe section start*/
+.contact_me_section > h1 {
+    padding: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.get_in_touch {
+    width: 100%;
+}
+
+.get_in_touch > h1 {
+    padding-left: 2%;
+    font-size: 25px;
+}
+
+.personalInFo {
+    /*display: inline-block;*/
+    border: 1px solid black;
+    margin: 23px;
+    display: flex;
+    /*width: 350px;*/
+    width: 90%;
+}
+
+.personalInFo > div:nth-child(1) {
+    width: 48px;
+    height: 48px;
+}
+
+.name > div:nth-child(1) {
+    background: url("../images/other icons/user-48.png") no-repeat;
+    background-size: cover;
+}
+
+.address > div:nth-child(1) {
+    background: url("../images/other icons/icons8-user-location-44.png") no-repeat;
+    background-size: cover;
+}
+
+.email > div:nth-child(1) {
+    background: url("../images/other icons/icons8-email-44.png") no-repeat;
+    background-size: cover;
+}
+
+.section_container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.message_me {
+    margin-left: 15px;
+    margin-right: 15px;
+    width: 100%;
+}
+
+.message_me > input {
+    height: 50px;
+    width: 350px;
+    margin: 10px 15px 10px 0;
+}
+
+#name, #email, #subject, #message {
+    width: 97%;
+}
+
+.message_me > button {
+    height: 48px;
+    width: 150px;
+    background: #ff253a;
+}
+
+.message_me > button > a {
+    text-decoration: none;
+    color: white;
+}
+
+.social_media_icons {
+    margin: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.social_media_icons > div > a > img {
+    width: 60px;
+    height: 60px;
+}
+
+.social_media_icons_container > h1 {
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+/*footer section start*/
+
+footer {
+    height: 40px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer>h2{
+    text-align: center;
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
 
 /*responsive part start*/
 
@@ -572,8 +694,13 @@ body > main > section {
         width: 100%;
     }
 
-    .about_details {
-        /*height: 640px;*/
+
+    .get_in_touch {
+        width: 100%;
+    }
+
+    footer > h2 {
+        font-size: 15px;
     }
 }
 
@@ -616,6 +743,9 @@ body > main > section {
         left: 31%;
     }
 
+    .message_me {
+        width: 100%;
+    }
 }
 
 @media (min-width: 768px) {
@@ -683,6 +813,18 @@ body > main > section {
         width: 260px;
         height: 260px;
     }
+
+    .message_me {
+        width: 55%;
+    }
+
+    .get_in_touch {
+        width: 40%;
+    }
+
+    #name, #email {
+        width: 243px;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -693,10 +835,18 @@ body > main > section {
     .about_para {
         font-size: 22px;
     }
+
+    #name, #email {
+        width: 291px;
+    }
 }
 
 @media (min-width: 1400px) {
     body > main {
         width: 1320px;
+    }
+
+    #name, #email {
+        width: 340px;
     }
 }
