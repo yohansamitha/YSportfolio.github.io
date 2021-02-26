@@ -477,6 +477,85 @@ body > main > section {
 
 /*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
+/*myProject section start*/
+.myProject_section > h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    margin: 10px;
+}
+
+.myProject_section > h3 {
+    font-size: 23px;
+    padding-left: 20px;
+}
+
+.project_container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 30px 25px;
+    flex-wrap: wrap;
+}
+
+.myProject {
+    width: 300px;
+    height: 400px;
+    border: 1px solid black;
+    transition-duration: 0.4s;
+    margin: 10px;
+}
+
+.myProject > h1 {
+    padding: 5px;
+    margin: 0;
+}
+
+.myProject > p {
+    padding: 7px;
+}
+
+.myProject > div {
+    position: relative;
+    height: 50%;
+    border: 1px solid black;
+    margin: 10px;
+    background: url("../images/project images/5fa3c4b558904.jpg");
+}
+
+.myProject:hover {
+    box-shadow: 1px 1px 8px 5px #000000;
+    transform: scale(1.1);
+    border-radius: 15px;
+}
+
+.myProject:hover .read_more {
+    opacity: 1;
+    transition-duration: 0.8s;
+}
+
+.read_more {
+    position: relative;
+    left: 45%;
+    top: 73%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    text-align: left;
+    width: 130px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.80);
+    border: 1px solid #CAD3C8;
+    transition: 0.4s;
+    opacity: 1;
+}
+
+.read_more > a {
+    color: black;
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
 
 /*responsive part start*/
 
@@ -525,6 +604,18 @@ body > main > section {
         width: 450px;
     }
 
+    .myProject {
+        width: 245px;
+    }
+
+    .project_container {
+        margin: 0;
+    }
+
+    .read_more {
+        left: 31%;
+    }
+
 }
 
 @media (min-width: 768px) {
@@ -535,9 +626,31 @@ body > main > section {
     .about_details {
         height: 537px;
     }
+
     .skill {
         width: 220px;
         height: 260px;
+    }
+
+    .myProject:hover .read_more {
+        opacity: 1;
+        transition-duration: 0.8s;
+    }
+
+    .read_more {
+        opacity: 0;
+    }
+
+    .myProject {
+        width: 300px;
+    }
+
+    .project_container {
+        margin: 30px 25px;
+    }
+
+    .read_more {
+        left: 45%;
     }
 }
 
@@ -565,6 +678,7 @@ body > main > section {
     .service_item_container {
         margin-top: 0;
     }
+
     .skill {
         width: 260px;
         height: 260px;
